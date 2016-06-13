@@ -1,1 +1,251 @@
 EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rfm69
+LIBS:teensy
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RFM69W U1
+U 1 1 575DEEE5
+P 4950 3150
+F 0 "U1" H 4950 2650 60  0000 C CNN
+F 1 "RFM69W" H 4950 3700 60  0000 C CNN
+F 2 "" H 4900 3100 60  0000 C CNN
+F 3 "" H 4900 3100 60  0000 C CNN
+	1    4950 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEENSY-3.2 U2
+U 1 1 575DEF7D
+P 7800 2450
+F 0 "U2" H 7800 3200 60  0000 C CNN
+F 1 "TEENSY-3.2" H 7800 3000 60  0000 C CNN
+F 2 "" H 7800 3000 60  0000 C CNN
+F 3 "" H 7800 3000 60  0000 C CNN
+	1    7800 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3100 5900 3100
+Wire Wire Line
+	6950 3000 5900 3000
+Wire Wire Line
+	6950 2900 5900 2900
+Wire Wire Line
+	8650 3100 8750 3100
+Wire Wire Line
+	8750 3100 8750 3900
+Wire Wire Line
+	8750 3900 6850 3900
+Wire Wire Line
+	6850 3900 6850 3200
+Wire Wire Line
+	6850 3200 5900 3200
+$Comp
+L GND #PWR6
+U 1 1 575DF29D
+P 7800 3650
+F 0 "#PWR6" H 7800 3400 50  0001 C CNN
+F 1 "GND" H 7800 3500 50  0000 C CNN
+F 2 "" H 7800 3650 50  0000 C CNN
+F 3 "" H 7800 3650 50  0000 C CNN
+	1    7800 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 3650 7800 3600
+$Comp
+L GND #PWR4
+U 1 1 575DF2D7
+P 6350 3650
+F 0 "#PWR4" H 6350 3400 50  0001 C CNN
+F 1 "GND" H 6350 3500 50  0000 C CNN
+F 2 "" H 6350 3650 50  0000 C CNN
+F 3 "" H 6350 3650 50  0000 C CNN
+	1    6350 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2800 6350 3650
+Wire Wire Line
+	6350 3500 5900 3500
+Wire Wire Line
+	6350 3300 5900 3300
+Connection ~ 6350 3500
+Wire Wire Line
+	6350 2800 5900 2800
+Connection ~ 6350 3300
+$Comp
+L ANTENNA_915 AE1
+U 1 1 575DF38C
+P 6000 2600
+F 0 "AE1" H 6100 2900 60  0000 C CNN
+F 1 "ANTENNA_915" H 6000 3100 60  0000 C CNN
+F 2 "" H 6000 2600 60  0000 C CNN
+F 3 "" H 6000 2600 60  0000 C CNN
+	1    6000 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 3400 6000 3400
+Wire Wire Line
+	6000 3400 6000 2550
+$Comp
+L +3.3V #PWR5
+U 1 1 575DF488
+P 7100 3550
+F 0 "#PWR5" H 7100 3400 50  0001 C CNN
+F 1 "+3.3V" H 7100 3690 50  0000 C CNN
+F 2 "" H 7100 3550 50  0000 C CNN
+F 3 "" H 7100 3550 50  0000 C CNN
+	1    7100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7700 3600 7700 3700
+Wire Wire Line
+	7700 3700 7100 3700
+Wire Wire Line
+	7100 3700 7100 3550
+$Comp
+L +3.3V #PWR1
+U 1 1 575DF51D
+P 3550 2650
+F 0 "#PWR1" H 3550 2500 50  0001 C CNN
+F 1 "+3.3V" H 3550 2790 50  0000 C CNN
+F 2 "" H 3550 2650 50  0000 C CNN
+F 3 "" H 3550 2650 50  0000 C CNN
+	1    3550 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2650 3550 3600
+Wire Wire Line
+	3550 3500 4000 3500
+Wire Wire Line
+	6950 1900 3900 1900
+Wire Wire Line
+	3900 1900 3900 2900
+Wire Wire Line
+	3900 2900 4000 2900
+$Comp
+L C C1
+U 1 1 575DF7A2
+P 3550 3750
+F 0 "C1" H 3575 3850 50  0000 L CNN
+F 1 "1 uF" H 3575 3650 50  0000 L CNN
+F 2 "" H 3588 3600 50  0000 C CNN
+F 3 "" H 3550 3750 50  0000 C CNN
+	1    3550 3750
+	1    0    0    -1  
+$EndComp
+Connection ~ 3550 3500
+$Comp
+L GND #PWR2
+U 1 1 575DF91D
+P 3550 3950
+F 0 "#PWR2" H 3550 3700 50  0001 C CNN
+F 1 "GND" H 3550 3800 50  0000 C CNN
+F 2 "" H 3550 3950 50  0000 C CNN
+F 3 "" H 3550 3950 50  0000 C CNN
+	1    3550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 3900 3550 3950
+$Comp
+L C C2
+U 1 1 575DF986
+P 3900 3750
+F 0 "C2" H 3925 3850 50  0000 L CNN
+F 1 "0.1 uF" H 3925 3650 50  0000 L CNN
+F 2 "" H 3938 3600 50  0000 C CNN
+F 3 "" H 3900 3750 50  0000 C CNN
+	1    3900 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3600 3900 3500
+Connection ~ 3900 3500
+$Comp
+L GND #PWR3
+U 1 1 575DFABE
+P 3900 3950
+F 0 "#PWR3" H 3900 3700 50  0001 C CNN
+F 1 "GND" H 3900 3800 50  0000 C CNN
+F 2 "" H 3900 3950 50  0000 C CNN
+F 3 "" H 3900 3950 50  0000 C CNN
+	1    3900 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 3900 3900 3950
+Text Label 5150 1900 0    60   ~ 0
+int
+Text Label 6450 2900 0    60   ~ 0
+nss
+Text Label 6450 3000 0    60   ~ 0
+mosi
+Text Label 6450 3100 0    60   ~ 0
+miso
+Text Label 6450 3200 0    60   ~ 0
+sck
+Text Label 6000 2650 0    60   ~ 0
+antenna
+$Comp
+L GND #PWR?
+U 1 1 575E0A1F
+P 3800 2950
+F 0 "#PWR?" H 3800 2700 50  0001 C CNN
+F 1 "GND" H 3800 2800 50  0000 C CNN
+F 2 "" H 3800 2950 50  0000 C CNN
+F 3 "" H 3800 2950 50  0000 C CNN
+	1    3800 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2800 3800 2800
+Wire Wire Line
+	3800 2800 3800 2950
+$EndSCHEMATC
