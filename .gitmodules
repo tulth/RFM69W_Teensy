@@ -1,0 +1,3 @@
+[submodule "teensy-firmware/submodule_teensy_cores"]
+	path = teensy-firmware/submodule_teensy_cores
+	url = git@github.com:tulth/cores.git
