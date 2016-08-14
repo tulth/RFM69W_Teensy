@@ -1,3 +1,7 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP DHT-22
+D Temperature/Humidity Sensor
+$ENDCMP
+#
 #End Doc Library
